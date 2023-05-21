@@ -6,8 +6,8 @@ export default async function pixabayApi(q) {
   // fetch(`${BASE_URL}api/`)
   try {
     const response =
-      await axios.get(`${BASE_URL}api/?q=${q}&page=1&key=${API_KEY}
-      &image_type=photo&orientation=horizontal&per_page=12   
+      await axios.get(`${BASE_URL}api/?q=${q}&page=1&key=${API_KEY}&image_type=photo&orientation=horizontal&per_page=12
+    
     `);
 
     return await response.data;
