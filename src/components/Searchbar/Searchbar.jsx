@@ -4,23 +4,18 @@ import { SearchHeader, SearchForm } from 'components/Searchbar/SearchbarStyled';
 
 export class Searchbar extends Component {
   state = {
-    value: '',
+    keyWord: '',
   };
-
-  // handelInput = ({ target: { value } }) => {
-  //   this.setState({ value });
-  // };
 
   handelInput = ({ target }) => {
     this.setState({
-      value: target.value,
+      keyWord: target.value,
     });
-    // console.log(target);
   };
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.handleKeyWord(this.state.value);
+    this.props.onKeyWord(this.state.keyWord);
   };
 
   render() {
@@ -38,7 +33,7 @@ export class Searchbar extends Component {
             autoFocus
             placeholder="Search images and photos"
             onChange={this.handelInput}
-            value={this.state.value}
+            value={this.state.keyWord}
           />
         </SearchForm>
       </SearchHeader>
@@ -47,25 +42,3 @@ export class Searchbar extends Component {
 }
 
 export default Searchbar;
-
-// export class Searchbar extends Component {
-//   render() {
-//     return (
-//       <SearchHeader>
-//         <form className="form">
-//           <button type="submit" className="button">
-//             <span class="button-label">Search</span>
-//           </button>
-
-//           <input
-//             className="input"
-//             type="text"
-//             autocomplete="off"
-//             autofocus
-//             placeholder="Search images and photos"
-//           />
-//         </form>
-//       </SearchHeader>
-//     );
-//   }
-// }

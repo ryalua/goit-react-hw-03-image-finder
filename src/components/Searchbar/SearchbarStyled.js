@@ -27,7 +27,7 @@ export const SearchForm = styled.form`
   border-radius: 3px;
   overflow: hidden;
 
-  &.SearchForm-button {
+  & .button {
     display: inline-block;
     width: 48px;
     height: 48px;
@@ -38,15 +38,15 @@ export const SearchForm = styled.form`
     background-position: center;
     opacity: 0.6;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
+    // cursor: pointer;
     outline: none;
   }
 
-  &.SearchForm-button:hover {
+  & .button:hover {
     opacity: 1;
   }
 
-  &.SearchForm-button-label {
+  & .button-label {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -58,7 +58,7 @@ export const SearchForm = styled.form`
     border: 0;
   }
 
-  &.SearchForm-input {
+  & .input {
     display: inline-block;
     width: 100%;
     font: inherit;
@@ -69,7 +69,7 @@ export const SearchForm = styled.form`
     padding-right: 4px;
   }
 
-  &.SearchForm-input::placeholder {
+  & .input::placeholder {
     font: inherit;
     font-size: 18px;
   }
