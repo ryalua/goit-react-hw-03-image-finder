@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import pixabayApi from 'components/servises/pixabayApi';
-import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem';
-// import { Gallery } from './ImageGalleryStyled';
+import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
+import Button from 'components/Button/Button';
+import { Gallery } from './ImageGalleryStyled';
 
 export class ImageGallery extends Component {
   state = {
@@ -20,9 +21,12 @@ export class ImageGallery extends Component {
     // console.log(this.state.photos);
     return (
       <>
-        <>
+        <Gallery>
           <ImageGalleryItem arrayPhotos={this.state.photos} />
-        </>
+          <Button />
+        </Gallery>
+
+        {/* <Button /> */}
       </>
     );
   }

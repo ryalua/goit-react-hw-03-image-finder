@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Gallery, GalleryItem } from './ImageGalleryItemStyled';
+import { GalleryItem } from './ImageGalleryItemStyled';
 
 export class ImageGalleryItem extends Component {
   render() {
     const { arrayPhotos } = this.props;
     // console.log(this.props);
     return (
-      <Gallery>
+      <>
         {arrayPhotos &&
           arrayPhotos.map(({ id, webformatURL, largeImageURL, tags }) => {
             return (
@@ -25,7 +25,7 @@ export class ImageGalleryItem extends Component {
               </GalleryItem>
             );
           })}
-      </Gallery>
+      </>
     );
   }
 }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-// import { Searchbar } from 'components/Searchbar/Searchbar';
 import { Searchbar } from 'components/Searchbar/Searchbar';
 import { ImageGallery } from 'components/ImageGallery/ImageGallery';
 import { ImageGalleryItem } from 'components/ImageGalleryItem/ImageGalleryItem';
+// import { Button } from 'components/Button/Button';
 
 export class App extends Component {
   state = {
@@ -17,9 +17,10 @@ export class App extends Component {
     return (
       <div>
         <Searchbar onKeyWord={this.handleKeyWord} />
-        <ImageGallery keyWord={this.state.keyWord}>
-          <ImageGalleryItem />
-        </ImageGallery>
+        <ImageGallery keyWord={this.state.keyWord} />
+        {/* <ImageGalleryItem /> */}
+        {/* </ImageGallery> */}
+        {/* <Button /> */}
       </div>
     );
   }
