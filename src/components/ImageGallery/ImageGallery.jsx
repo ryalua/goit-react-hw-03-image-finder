@@ -52,11 +52,11 @@ export class ImageGallery extends Component {
     return (
       <>
         <Gallery>
-          <Loader onSpinner={this.state} />
           <ImageGalleryItem arrayPhotos={this.state.photos} />
           {this.state.photos.length !== 0 && (
             <Button onCount={this.handleLoadMore} />
           )}
+          <Loader onSpinner={this.state} />
         </Gallery>
       </>
     );
