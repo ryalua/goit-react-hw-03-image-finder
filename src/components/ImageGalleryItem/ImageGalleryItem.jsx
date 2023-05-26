@@ -4,6 +4,7 @@ import { GalleryItem } from './ImageGalleryItemStyled';
 export class ImageGalleryItem extends Component {
   render() {
     const { arrayPhotos } = this.props;
+
     // console.log(this.props);
     return (
       <>

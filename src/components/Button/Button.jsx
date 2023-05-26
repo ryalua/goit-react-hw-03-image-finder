@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 import { LoadMoreBtn } from './ButtonStyled';
 
-export class Button extends Component {
-  render() {
-    return <LoadMoreBtn type="button">Load more</LoadMoreBtn>;
-  }
-}
+import React from 'react';
 
-export default Button;
+export default function Button({ onCount }) {
+  return (
+    <LoadMoreBtn type="button" onClick={onCount}>
+      Load more
+    </LoadMoreBtn>
+  );
+}
