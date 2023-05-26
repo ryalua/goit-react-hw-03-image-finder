@@ -5,6 +5,7 @@ import pixabayApi from 'components/servises/pixabayApi';
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 import Button from 'components/Button/Button';
 import { Gallery } from './ImageGalleryStyled';
+import Loader from 'components/Loader/Loader';
 import 'react-toastify/dist/ReactToastify.css';
 
 export class ImageGallery extends Component {
@@ -51,6 +52,7 @@ export class ImageGallery extends Component {
     return (
       <>
         <Gallery>
+          <Loader onSpinner={this.state} />
           <ImageGalleryItem arrayPhotos={this.state.photos} />
           {this.state.photos.length !== 0 && (
             <Button onCount={this.handleLoadMore} />
