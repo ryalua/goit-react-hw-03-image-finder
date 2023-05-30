@@ -41,7 +41,6 @@ export class ImageGalleryItem extends Component {
     const { showModal, largeImage } = this.state;
     const { arrayPhotos } = this.props;
 
-    console.log(this.state);
     return (
       <>
         {arrayPhotos.map(({ id, webformatURL, largeImageURL, tags }) => (

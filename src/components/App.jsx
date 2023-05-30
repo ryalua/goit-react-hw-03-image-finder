@@ -4,8 +4,7 @@ import { ImageGallery } from 'components/ImageGallery/ImageGallery';
 
 export class App extends Component {
   state = {
-    // photos: [],
-    // page: 1,
+    keyWord: '',
   };
 
   handleKeyWord = keyWord => {

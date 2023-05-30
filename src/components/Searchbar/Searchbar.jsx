@@ -20,9 +20,6 @@ export class Searchbar extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    // this.setState({ page: 1 });
-    console.log(this.state.keyWord);
-
     // Проверка: Пустой ли массив при запросе?
     if (this.state.keyWord === '') {
       toast.warn(
@@ -41,7 +38,6 @@ export class Searchbar extends Component {
       return;
     }
     this.props.onKeyWord(this.state.keyWord);
-    // this.props.onPage(this.state.page);
   };
 
   render() {
