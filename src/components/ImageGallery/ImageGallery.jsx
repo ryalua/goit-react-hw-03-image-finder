@@ -6,6 +6,7 @@ import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 import Button from 'components/Button/Button';
 import { Gallery } from './ImageGalleryStyled';
 import Loader from 'components/Loader/Loader';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 export class ImageGallery extends Component {
@@ -18,13 +19,10 @@ export class ImageGallery extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.keyWord !== this.props.keyWord) {
-      // this.setState({ page: 1 });
-
       pixabayApi(this.props.keyWord, this.props.page)
         .then(response => response)
         .then(photos => this.setState({ photos: photos.hits }));
     }
-    console.log(this.props.keyWord);
   }
 
   handleLoadMore = () => {
@@ -48,7 +46,6 @@ export class ImageGallery extends Component {
   };
 
   render() {
-    // console.log(this.state.page);
     return (
       <>
         <Gallery>

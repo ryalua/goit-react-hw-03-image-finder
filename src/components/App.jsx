@@ -5,8 +5,7 @@ import { ImageGallery } from 'components/ImageGallery/ImageGallery';
 export class App extends Component {
   state = {
     // photos: [],
-    page: 1,
-    // keyWord: '',
+    // page: 1,
   };
 
   handleKeyWord = keyWord => {
@@ -14,8 +13,6 @@ export class App extends Component {
   };
 
   render() {
-    // const { onPage } = this.props;
-    console.log(this.state);
     return (
       <div>
         <Searchbar onKeyWord={this.handleKeyWord} />
